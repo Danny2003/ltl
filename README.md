@@ -17,37 +17,37 @@ See `Input_Format.pdf`.
 See how to run the program:
 
 ```shell
-python3 main.py -h
+python main.py -h
 ```
 
 Run the program to output the result as in Canvas:
 
 ```shell
-python3 main.py ts_file ltl_file
+python main.py ts_file ltl_file
 ```
 
 Run the program to output the result in detail, including parsing results, the GNBA, the NBA, the product construction, and the countercase:
 
 ```shell
-python3 main.py ts_file ltl_file -d
+python main.py ts_file ltl_file -d
 ```
 
 Output the result to a file:
 
 ```shell
-python3 main.py ts_file ltl_file -f output_file
+python main.py ts_file ltl_file -f output_file
 ```
 
 or
 
 ```shell
-python3 main.py ts_file ltl_file -f output_file -d
+python main.py ts_file ltl_file -f output_file -d
 ```
 
 ## Help
 
 ```shell
-python3 main.py -h
+python main.py -h
 ```
 The output is as follows:
 
