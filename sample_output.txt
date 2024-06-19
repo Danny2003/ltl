@@ -1,0 +1,387 @@
+parsing the transition system:
+states: s_0 s_1 s_2 s_3 s_4 s_5
+initial states: s_0
+actions: 0 1 2
+transitions:
+s_0 with action 1 --> s_1
+s_0 with action 0 --> s_3
+s_3 with action 2 --> s_1
+s_1 with action 2 --> s_4
+s_2 with action 2 --> s_1
+s_5 with action 0 --> s_2
+s_5 with action 1 --> s_1
+s_4 with action 0 --> s_1
+s_4 with action 1 --> s_5
+propositions: a b c
+labeling:
+s_0 is labeled with propositions: a b 
+s_1 is labeled with propositions: a c b 
+s_2 is labeled with propositions: c b 
+s_3 is labeled with propositions: a c 
+s_4 is labeled with propositions: a c 
+s_5 is labeled with propositions: a b 
+
+start from initial states of the ts
+LTL formula:
+('always', ('or', ('atom', 'a'), ('atom', 'b')))
+negation of the original formula after transformation:
+('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))
+
+GNBA states:
+frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')})
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')})
+frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')})
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')})
+frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')})
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')})
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')})
+GNBA initial states:
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')})
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')})
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')})
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')})
+GNBA acceptance conditions:
+F_0:
+frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')})
+frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')})
+frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')})
+frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')})
+
+NBA states:
+(frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0)
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0)
+(frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0)
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0)
+(frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')}), 0)
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0)
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0)
+('trap', 0)
+NBA initial states:
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0)
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0)
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0)
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0)
+NBA acceptance conditions:
+(frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0)
+(frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0)
+(frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')}), 0)
+(frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0)
+
+Product states:
+(0, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(0, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(0, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0))
+(0, ('trap', 0))
+(1, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(1, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(1, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(1, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(1, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')}), 0))
+(1, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0))
+(1, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0))
+(1, ('trap', 0))
+(2, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(2, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(2, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(2, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(2, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')}), 0))
+(2, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0))
+(2, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0))
+(2, ('trap', 0))
+(3, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(3, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(3, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(3, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(3, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')}), 0))
+(3, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0))
+(3, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0))
+(3, ('trap', 0))
+(4, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(4, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(4, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(4, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(4, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')}), 0))
+(4, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0))
+(4, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0))
+(4, ('trap', 0))
+(5, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(5, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(5, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(5, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(5, (frozenset({('not', ('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))))), ('not', ('atom', 'a')), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true')}), 0))
+(5, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0))
+(5, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0))
+(5, ('trap', 0))
+Product initial states:
+(0, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'b')), ('atom', 'true'), ('atom', 'a')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('atom', 'b'), ('atom', 'true'), ('atom', 'a')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('atom', 'b'), ('atom', 'true')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b')))), ('not', ('atom', 'a')), ('and', ('not', ('atom', 'a')), ('not', ('atom', 'b'))), ('not', ('atom', 'b')), ('atom', 'true')}), 0))
+(0, ('trap', 0))
+
+result: true
+
+initial state: 1
+LTL formula:
+('next', ('and', ('atom', 'a'), ('atom', 'c')))
+negation of the original formula after transformation:
+('not', ('next', ('and', ('atom', 'a'), ('atom', 'c'))))
+
+GNBA states:
+frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))})
+frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))})
+GNBA initial states:
+frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))})
+GNBA acceptance conditions:
+empty
+
+NBA states:
+frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))})
+frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))})
+('trap', 0)
+NBA initial states:
+frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))})
+NBA acceptance conditions:
+frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))})
+frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))})
+frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))})
+
+Product states:
+(0, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(0, frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(0, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(0, frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(0, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(0, frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(0, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(0, frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(0, ('trap', 0))
+(1, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(1, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(1, ('trap', 0))
+(2, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(2, frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(2, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(2, frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(2, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(2, frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(2, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(2, frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(2, ('trap', 0))
+(3, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(3, frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(3, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(3, frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(3, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(3, frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(3, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(3, frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(3, ('trap', 0))
+(4, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(4, frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(4, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(4, frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(4, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(4, frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(4, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(4, frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(4, ('trap', 0))
+(5, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(5, frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(5, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(5, frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(5, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(5, frozenset({('atom', 'c'), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(5, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(5, frozenset({('atom', 'c'), ('atom', 'a'), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('and', ('atom', 'a'), ('atom', 'c'))}))
+(5, ('trap', 0))
+Product initial states:
+(1, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('not', ('atom', 'c')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('not', ('atom', 'c')), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('not', ('atom', 'c')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('atom', 'a'), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('not', ('next', ('and', ('atom', 'a'), ('atom', 'c')))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, frozenset({('atom', 'c'), ('not', ('atom', 'a')), ('next', ('and', ('atom', 'a'), ('atom', 'c'))), ('not', ('and', ('atom', 'a'), ('atom', 'c')))}))
+(1, ('trap', 0))
+
+result: true
+
+initial state: 2
+LTL formula:
+('not', ('eventually', ('atom', 'a')))
+negation of the original formula after transformation:
+('until', ('atom', 'true'), ('atom', 'a'))
+
+GNBA states:
+frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')})
+frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')})
+frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')})
+GNBA initial states:
+frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')})
+frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')})
+GNBA acceptance conditions:
+F_0:
+frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')})
+frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')})
+
+NBA states:
+(frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')}), 0)
+(frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0)
+(frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0)
+('trap', 0)
+NBA initial states:
+(frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0)
+(frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0)
+NBA acceptance conditions:
+(frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')}), 0)
+(frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0)
+
+Product states:
+(0, (frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0))
+(0, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0))
+(0, ('trap', 0))
+(1, (frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')}), 0))
+(1, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0))
+(1, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0))
+(1, ('trap', 0))
+(2, (frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')}), 0))
+(2, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0))
+(2, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0))
+(2, ('trap', 0))
+(3, (frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')}), 0))
+(3, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0))
+(3, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0))
+(3, ('trap', 0))
+(4, (frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')}), 0))
+(4, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0))
+(4, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0))
+(4, ('trap', 0))
+(5, (frozenset({('not', ('atom', 'a')), ('not', ('until', ('atom', 'true'), ('atom', 'a'))), ('atom', 'true')}), 0))
+(5, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0))
+(5, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0))
+(5, ('trap', 0))
+Product initial states:
+(2, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('not', ('atom', 'a')), ('atom', 'true')}), 0))
+(2, (frozenset({('until', ('atom', 'true'), ('atom', 'a')), ('atom', 'true'), ('atom', 'a')}), 0))
+(2, ('trap', 0))
+
+result: false
+countercase: s_2 -> s_1 -> s_4 -> s_5 -> s_2 -> s_1 -> s_4 -> s_5
+
+initial state: 3
+LTL formula:
+('until', ('atom', 'c'), ('not', ('atom', 'a')))
+negation of the original formula after transformation:
+('not', ('until', ('atom', 'c'), ('not', ('atom', 'a'))))
+
+GNBA states:
+frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')})
+frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))})
+frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')})
+frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('atom', 'a')})
+frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))})
+GNBA initial states:
+frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')})
+frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')})
+GNBA acceptance conditions:
+F_0:
+frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')})
+frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))})
+frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')})
+frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))})
+
+NBA states:
+(frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0)
+(frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))}), 0)
+(frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0)
+(frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('atom', 'a')}), 0)
+(frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))}), 0)
+('trap', 0)
+NBA initial states:
+(frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0)
+(frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0)
+NBA acceptance conditions:
+(frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0)
+(frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))}), 0)
+(frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0)
+(frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))}), 0)
+
+Product states:
+(0, (frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0))
+(0, (frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))}), 0))
+(0, (frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0))
+(0, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('atom', 'a')}), 0))
+(0, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))}), 0))
+(0, ('trap', 0))
+(1, (frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0))
+(1, (frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))}), 0))
+(1, (frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0))
+(1, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('atom', 'a')}), 0))
+(1, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))}), 0))
+(1, ('trap', 0))
+(2, (frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0))
+(2, (frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))}), 0))
+(2, (frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0))
+(2, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('atom', 'a')}), 0))
+(2, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))}), 0))
+(2, ('trap', 0))
+(3, (frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0))
+(3, (frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))}), 0))
+(3, (frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0))
+(3, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('atom', 'a')}), 0))
+(3, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))}), 0))
+(3, ('trap', 0))
+(4, (frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0))
+(4, (frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))}), 0))
+(4, (frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0))
+(4, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('atom', 'a')}), 0))
+(4, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))}), 0))
+(4, ('trap', 0))
+(5, (frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0))
+(5, (frozenset({('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a')), ('not', ('atom', 'c'))}), 0))
+(5, (frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0))
+(5, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('atom', 'a')}), 0))
+(5, (frozenset({('atom', 'c'), ('until', ('atom', 'c'), ('not', ('atom', 'a'))), ('not', ('atom', 'a'))}), 0))
+(5, ('trap', 0))
+Product initial states:
+(3, (frozenset({('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('not', ('atom', 'c')), ('atom', 'a')}), 0))
+(3, (frozenset({('atom', 'c'), ('not', ('until', ('atom', 'c'), ('not', ('atom', 'a')))), ('atom', 'a')}), 0))
+(3, ('trap', 0))
+
+result: false
+countercase: s_3 -> s_1 -> s_4 -> s_5 -> s_2 -> s_1 -> s_4 -> s_5 -> s_2
+
